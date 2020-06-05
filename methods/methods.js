@@ -38,7 +38,7 @@ const countFilesStartingWithLetter = (dir, letter) => {
     counter++;
   });
 
-  console.log(`\nThere are ${counter} files starting with letter ${letter} \n`, files_);
+  console.log(`\nThere are ${counter} files starting with letter "${letter}" \n`, files_);
 };
 
 module.exports = {
