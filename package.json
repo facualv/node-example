@@ -1,0 +1,11 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "A simple node app to practice with buit in node libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "turco",
+  "license": "ISC"
+}
