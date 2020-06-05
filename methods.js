@@ -1,13 +1,13 @@
 const fs = require("fs");
 
-const getArrayOfFilesInDirectory = (dir, files_) => {
-  files_ = files_ || [];
+const getArrayOfFilesInDirectory = (dir) => {
+  let files_ = [];
   files_ = fs.readdirSync(dir);
   return files_;
 };
 
-const printAllFilesInDirectory = (dir, files_) => {
-  files_ = files_ || [];
+const printAllFilesInDirectory = (dir) => {
+  let files_ = [];
   files_ = fs.readdirSync(dir);
   console.log("This is the printed list of all the files in the directory\n");
   files_.forEach((file) => {
@@ -16,24 +16,28 @@ const printAllFilesInDirectory = (dir, files_) => {
   console.log("\n");
 };
 
-const printInvertedArray = (dir, files_) => {
-  files_ = files_ || [];
+const printInvertedArray = (dir) => {
+  let files_ = [];
   files_ = fs.readdirSync(dir);
   const sortedArray = files_.sort();
   const invertedSortedArray = sortedArray.reverse();
   console.log("This the previous array but inverse sorted\n", invertedSortedArray);
 };
 
-const countFilesStartingWithLetter = (dir, letter, files_) => {
+const countFilesStartingWithLetter = (dir, letter) => {
   let counter = 0;
-  files_ = files_ || [];
+  let files_ = [];
+
   files_ = fs.readdirSync(dir);
+
   files_ = files_.filter((file) => {
     return file.startsWith(letter);
   });
+
   files_.forEach((file) => {
     counter++;
   });
+
   console.log(`\nThere are ${counter} files starting with letter ${letter} \n`, files_);
 };
 
